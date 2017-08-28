@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">Aplicación Gestión de Peticiones</a>
+    </div>
+
+	<!-- Mantenimiento de Tablas -->
+    <ul class="nav navbar-nav">
+        <li routerLinkActive="active">
+          <a routerLink="/tablaproducto">Tabla PRODUCTO</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/tablacostesgastos">Tabla CyG e Incentivos</a>
+        </li>       
+    </ul>
+    
+    <!-- Peticiones de Desglose -->
+    <ul class="nav navbar-nav">
+        <li routerLinkActive="active">
+          <a routerLink="/precontractual">PREContractual</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/contractual">CONTractual</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/postcontractual">POSTContractual</a>
+        </li>
+    </ul>
+                
+                
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
