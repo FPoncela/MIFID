@@ -23,27 +23,33 @@ body {
 }
 
 
+.navbar-inverse {
+    background-color: #ff0000;
+    border-color: #ff0000;
+}  
 
-
-
-
-.datepickerdemoBasicUsage {
-  /** Demo styles for mdCalendar. */ }
-  .datepickerdemoBasicUsage md-content {
-    padding-bottom: 200px; }
-  .datepickerdemoBasicUsage .validation-messages {
-    font-size: 11px;
-    color: darkred;
-    margin: 10px 0 0 25px; }
-
-.md-calendar-day-header {
-  background-color: #7D9BC1;
+.navbar-inverse .navbar-brand {
+    color: #ffffff
 }
 
-.md-default-theme .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-default-theme .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator {
-  background: #105FA8;
+legend {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    /** border-color: currentcolor currentcolor #e5e5e5; **/
+    border-image: none;
+    /** border-style: none none solid; **/
+    border-width: 0 0 0px;
+    color: #170000;
+    display: block;
+    font-size: 28px;
+    line-height: inherit;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 100%;
 }
 
-.md-default-theme .md-datepicker-open .md-datepicker-calendar-icon, .md-datepicker-open .md-datepicker-calendar-icon {
-    fill: #105FA8;
+textarea {
+    resize: none;
 }

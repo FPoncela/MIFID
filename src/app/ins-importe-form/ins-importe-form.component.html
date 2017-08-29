@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Aplicación Gestión de Peticiones</title>  
+</head>
+<body> 
+
+	<!-- Header -->
+	<div id="header">
+		<nav class="navbar navbar-inverse ">		
+				<div class="navbar-header">
+					<a class="navbar-brand">Aplicación Gestión de Peticiones</a>					
+				</div>																
+		</nav>
+	</div>
+		
+	<form class="form-horizontal" [formGroup]="form"> 	      
+	    	  
+	    <div class="col-md-4 inputGroupContainer">
+		    <div class="input-group"></div>			    	                		                           
+		</div>
+		
+		<div class="form-group">	  
+		    <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+		
+		<div class="form-group">	  
+	  	  <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		  </div>		                		                            
+		</div>
+		
+		<div class="form-group">	  
+		    <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+		
+		<legend>&nbsp;&nbsp;Mantenimiento de Tabla 'Instrumento Importe'</legend>
+		
+	  	<div class="col-md-4" [ngClass]="displayFieldCss('ninsfin')">
+		    <i class="glyphicon glyphicon-user"></i>
+		    <label for="ninsfin" class="control-label required">Nº Instrumento Financiero:</label>
+		    <input type="text" id="ninsfin" class="form-control" placeholder="Nº Instrumento Financiero" formControlName="ninsfin" maxlength="2">
+		    <app-field-error-display [displayError]="isFieldValid('ninsfin')" errorMsg="Por favor, indique Nº Instrumento Financiero">
+		    </app-field-error-display>
+		</div>	  
+			  
+	    <div class="col-md-6" [ngClass]="displayFieldCss('ncygi')">
+		    <i class="glyphicon glyphicon-user"></i>
+		    <label for="ncygi" class="control-label required">Nº CyG o Incentivo:</label>
+		    <input type="text" id="ncygi" class="form-control" placeholder="Nº CyG o Incentivo" formControlName="ncygi" maxlength="3">
+		    <app-field-error-display [displayError]="isFieldValid('ncygi')" errorMsg="Por favor, indique Nº CyG o Incentivo">
+		    </app-field-error-display>
+		</div>		  	    
+	     
+	    <div class="form-group">	  
+	    	<div class="col-md-4 inputGroupContainer">
+		    	<div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+		
+		<div class="form-group">	  
+		    <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+	
+	  <div class="form-group">
+	  	<label class="col-md-4 control-label"></label>
+		  <div class="col-md-4">
+		  	<button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+		  	<button class="btn" (click)="reset()">Reset</button>
+		  </div>	  
+	  </div> 
+	
+	</form>
+</body>
+</html>	

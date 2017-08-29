@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Aplicación Gestión de Peticiones</title>  
+</head>
+<body> 
+
+	<!-- Header -->
+	<div id="header">
+		<nav class="navbar navbar-inverse ">		
+				<div class="navbar-header">
+					<a class="navbar-brand">Aplicación Gestión de Peticiones</a>					
+				</div>																
+		</nav>
+	</div>
+		
+	<div class="col-md-4 inputGroupContainer">
+	    <div class="input-group"></div>			    	                		                           
+	</div>
+	
+	<div class="form-group">	  
+	    <div class="col-md-4 inputGroupContainer">
+		    <div class="input-group"></div>	
+	    </div>		                		                            
+	</div>
+	
+	<div class="form-group">	  
+  	  <div class="col-md-4 inputGroupContainer">
+		    <div class="input-group"></div>	
+	  </div>		                		                            
+	</div>
+	
+	<div class="form-group">	  
+	    <div class="col-md-4 inputGroupContainer">
+		    <div class="input-group"></div>	
+	    </div>		                		                            
+	</div>
+	
+	<legend>&nbsp;&nbsp;Listado de Registros 'Instrumento Financiero'</legend>
+		
+	<table>
+	  <thead>
+	    <tr>
+	      <th>Nº Instrumento Financiero</th>
+	      <th>Descripción Producto</th>	      
+	      <th>Agrupación</th>
+	    </tr>
+	  </thead>
+	  <tfoot>
+	    <tr>
+	      <td colspan="3">El Nº de registros es:</td>
+	      <td ng-bind="regs.length"></td>
+	    </tr>
+	  </tfoot>
+	  <tbody>
+	    <tr ng-repeat="reg in regs" ng-style="{color:($odd?'red':'green')}">
+	      <td>
+		      <td>{{reg.ninsfin}}</td>
+		      <td>{{reg.descprod}}</td>	      
+		      <td>{{reg.agrupacion}}</td>
+	      <td>	          	      
+	    </tr>
+	  </tbody>
+	</table>
+ 	    
+	     
+    <div class="form-group">	  
+    	<div class="col-md-4 inputGroupContainer">
+	    	<div class="input-group"></div>	
+	    </div>		                		                            
+	</div>
+		
+	<div class="form-group">	  
+	    <div class="col-md-4 inputGroupContainer">
+		    <div class="input-group"></div>	
+	    </div>		                		                            
+	</div> 
+		
+</body>
+</html>	

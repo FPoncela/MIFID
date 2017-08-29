@@ -1,111 +1,131 @@
-<meta charset="utf-8">
-<form class="form-horizontal" [formGroup]="form"> 	      
-    	  
-    <div class="col-md-4 inputGroupContainer">
-	    <div class="input-group"></div>	
-	    	                		                           
-	</div>
-	
-	<div class="form-group">	  
-	    <div class="col-md-4 inputGroupContainer">
-		    <div class="input-group"></div>	
-	    </div>		                		                            
-	</div>
-	
-	<div class="form-group">	  
-  	  <div class="col-md-4 inputGroupContainer">
-		    <div class="input-group"></div>	
-	  </div>		                		                            
-	</div>
-	
-	<div class="form-group">	  
-	    <div class="col-md-4 inputGroupContainer">
-		    <div class="input-group"></div>	
-	    </div>		                		                            
-	</div>
-	
-  	<div class="col-md-4" [ngClass]="displayFieldCss('nif')">
-	    <i class="glyphicon glyphicon-user"></i>
-	    <label for="nif" class="control-label required">NIF:</label>
-	    <input type="text" id="nif" class="form-control" placeholder="NIF" formControlName="nif">
-	    <app-field-error-display [displayError]="isFieldValid('nif')" errorMsg="Por favor, indique NIF">
-	    </app-field-error-display>
-	</div>	  
-		  
-    <div class="col-md-4" [ngClass]="displayFieldCss('cif')">
-      	<i class="glyphicon glyphicon-user"></i>
-     	<label for="cif" class="control-label required">CIF:</label>
-      	<input type="text" id="cif" class="form-control" placeholder="CIF" formControlName="cif">
-      	<app-field-error-display [displayError]="isFieldValid('cif')" errorMsg="Por favor, indique CIF">
-      	</app-field-error-display>
-    </div>	
-  
-    <div class="col-md-4" [ngClass]="displayFieldCss('codid')">
-     	<i class="glyphicon glyphicon-barcode"></i>
-      	<label for="codid" class="control-label required">Código de Identificación (F/J):</label>
-      	<input type="text" id="codid" class="form-control" placeholder="Código de Identificación (F/J)" formControlName="codid">
-      	<app-field-error-display [displayError]="isFieldValid('codid')" errorMsg="Por favor, indique Código de Identificación (F/J)">
-      	</app-field-error-display>
-    </div>
-     
-    <div class="col-sm-12" [ngClass]="displayFieldCss('contrato')">
-	    <i class="glyphicon glyphicon-check"></i>
-	    <label for="contrato" class="control-label required">Contrato:</label>
-	    <input type="text" id="contrato" class="form-control" placeholder="Contrato" formControlName="contrato">
-	    <app-field-error-display [displayError]="isFieldValid('contrato')" errorMsg="Por favor, indique Contrato">
-	    </app-field-error-display>
-    </div>
-     
-    <div class="col-sm-12" [ngClass]="displayFieldCss('producto')">
-	    <i class="glyphicon glyphicon-list-alt"></i>
-	    <label for="producto" class="control-label required">Producto:</label>
-	    <input type="text" id="producto" class="form-control" placeholder="Producto" formControlName="producto">
-	    <app-field-error-display [displayError]="isFieldValid('producto')" errorMsg="Por favor, indique Producto">
-	    </app-field-error-display>
-    </div>
-      
-    <div class="col-sm-12" [ngClass]="displayFieldCss('isin')">
-      	<i class="glyphicon glyphicon-file"></i>
-      	<label for="isin" class="control-label required">ISIN:</label>
-      	<input type="text" id="isin" class="form-control" placeholder="ISIN" formControlName="isin">
-      	<app-field-error-display [displayError]="isFieldValid('isin')" errorMsg="Por favor, indique ISIN">
-      	</app-field-error-display>
-    </div>
-      
-    <div class="col-md-4" [ngClass]="displayFieldCss('noper')">
-      	<i class="glyphicon glyphicon-file"></i>
-      	<label for="noper" class="control-label required">Nº Operación:</label>
-      	<input type="text" id="noper" class="form-control" placeholder="Nº Operación" formControlName="noper">
-      	<app-field-error-display [displayError]="isFieldValid('noper')" errorMsg="Por favor, indique Nº Operación">
-      	</app-field-error-display>
-    </div>
-       
-    <div class="col-sm-12" [ngClass]="displayFieldCss('fecha')">
-      	<i class="glyphicon glyphicon-calendar"></i>
-      	<label for="fecha" class="control-label required">Fecha:</label>
-      	<input type="text" id="fecha" class="form-control" placeholder="Fecha" formControlName="fecha">
-      	<app-field-error-display [displayError]="isFieldValid('fecha')" errorMsg="Por favor, indique una fecha válida">
-	    </app-field-error-display>
-    </div>
-     
-    <div class="form-group">	  
-    	<div class="col-md-4 inputGroupContainer">
-	    	<div class="input-group"></div>	
-	    </div>		                		                            
-	</div>
-	
-	<div class="form-group">	  
-	    <div class="col-md-4 inputGroupContainer">
-		    <div class="input-group"></div>	
-	    </div>		                		                            
-	</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Aplicación Gestión de Peticiones</title>  
+</head>
+<body> 
 
-  <div class="form-group">
-  	<label class="col-md-4 control-label"></label>
-	  <div class="col-md-4">
-	  	<button class="btn btn-primary" (click)="onSubmit()">Submit</button>
-	  	<button class="btn" (click)="reset()">Reset</button>
-	  </div>	  
-  </div> 
-
-</form>
+	<!-- Header -->
+	<div id="header">
+		<nav class="navbar navbar-inverse ">		
+				<div class="navbar-header">
+					<a class="navbar-brand" href="../index.jsp">Aplicación Gestión de Peticiones</a>					
+				</div>																
+		</nav>
+	</div>
+		
+	<form class="form-horizontal" [formGroup]="form"> 	      
+	    	  
+	    <div class="col-md-4 inputGroupContainer">
+		    <div class="input-group"></div>	
+		    	                		                           
+		</div>
+		
+		<div class="form-group">	  
+		    <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+		
+		<div class="form-group">	  
+	  	  <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		  </div>		                		                            
+		</div>
+		
+		<div class="form-group">	  
+		    <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+		
+		<legend>&nbsp;&nbsp;&nbsp;CONTractual - Petición de Desglose CyG</legend>
+		
+	  	<div class="col-md-4" [ngClass]="displayFieldCss('nif')">
+		    <i class="glyphicon glyphicon-user"></i>
+		    <label for="nif" class="control-label required">NIF:</label>
+		    <input type="text" id="nif" class="form-control" placeholder="NIF" formControlName="nif">
+		    <app-field-error-display [displayError]="isFieldValid('nif')" errorMsg="Por favor, indique NIF">
+		    </app-field-error-display>
+		</div>	  
+			  
+	    <div class="col-md-4" [ngClass]="displayFieldCss('cif')">
+	      	<i class="glyphicon glyphicon-user"></i>
+	     	<label for="cif" class="control-label required">CIF:</label>
+	      	<input type="text" id="cif" class="form-control" placeholder="CIF" formControlName="cif">
+	      	<app-field-error-display [displayError]="isFieldValid('cif')" errorMsg="Por favor, indique CIF">
+	      	</app-field-error-display>
+	    </div>	
+	  
+	    <div class="col-md-4" [ngClass]="displayFieldCss('codid')">
+	     	<i class="glyphicon glyphicon-barcode"></i>
+	      	<label for="codid" class="control-label required">Código de Identificación (F/J):</label>
+	      	<input type="text" id="codid" class="form-control" placeholder="Código de Identificación (F/J)" formControlName="codid">
+	      	<app-field-error-display [displayError]="isFieldValid('codid')" errorMsg="Por favor, indique Código de Identificación (F/J)">
+	      	</app-field-error-display>
+	    </div>
+	     
+	    <div class="col-sm-12" [ngClass]="displayFieldCss('contrato')">
+		    <i class="glyphicon glyphicon-check"></i>
+		    <label for="contrato" class="control-label required">Contrato:</label>
+		    <input type="text" id="contrato" class="form-control" placeholder="Contrato" formControlName="contrato">
+		    <app-field-error-display [displayError]="isFieldValid('contrato')" errorMsg="Por favor, indique Contrato">
+		    </app-field-error-display>
+	    </div>
+	     
+	    <div class="col-sm-12" [ngClass]="displayFieldCss('producto')">
+		    <i class="glyphicon glyphicon-list-alt"></i>
+		    <label for="producto" class="control-label required">Producto:</label>
+		    <input type="text" id="producto" class="form-control" placeholder="Producto" formControlName="producto">
+		    <app-field-error-display [displayError]="isFieldValid('producto')" errorMsg="Por favor, indique Producto">
+		    </app-field-error-display>
+	    </div>
+	      
+	    <div class="col-sm-12" [ngClass]="displayFieldCss('isin')">
+	      	<i class="glyphicon glyphicon-file"></i>
+	      	<label for="isin" class="control-label required">ISIN:</label>
+	      	<input type="text" id="isin" class="form-control" placeholder="ISIN" formControlName="isin">
+	      	<app-field-error-display [displayError]="isFieldValid('isin')" errorMsg="Por favor, indique ISIN">
+	      	</app-field-error-display>
+	    </div>
+	      
+	    <div class="col-md-4" [ngClass]="displayFieldCss('noper')">
+	      	<i class="glyphicon glyphicon-file"></i>
+	      	<label for="noper" class="control-label required">Nº Operación:</label>
+	      	<input type="text" id="noper" class="form-control" placeholder="Nº Operación" formControlName="noper">
+	      	<app-field-error-display [displayError]="isFieldValid('noper')" errorMsg="Por favor, indique Nº Operación">
+	      	</app-field-error-display>
+	    </div>
+	       
+	    <div class="col-sm-12" [ngClass]="displayFieldCss('fecha')">
+	      	<i class="glyphicon glyphicon-calendar"></i>
+	      	<label for="fecha" class="control-label required">Fecha:</label>
+	      	<input type="text" id="fecha" class="form-control" placeholder="Fecha" formControlName="fecha">
+	      	<app-field-error-display [displayError]="isFieldValid('fecha')" errorMsg="Por favor, indique una fecha válida">
+		    </app-field-error-display>
+	    </div>
+	     
+	    <div class="form-group">	  
+	    	<div class="col-md-4 inputGroupContainer">
+		    	<div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+		
+		<div class="form-group">	  
+		    <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+	
+	  <div class="form-group">
+	  	<label class="col-md-4 control-label"></label>
+		  <div class="col-md-4">
+		  	<button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+		  	<button class="btn" (click)="reset()">Reset</button>
+		  </div>	  
+	  </div> 
+	
+	</form>
+</body>
+</html>	

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Aplicación Gestión de Peticiones</title>  
+</head>
+<body> 
+
+	<!-- Header -->
+	<div id="header">
+		<nav class="navbar navbar-inverse ">		
+				<div class="navbar-header">
+					<a class="navbar-brand">Aplicación Gestión de Peticiones</a>					
+				</div>																
+		</nav>
+	</div>
+		
+	<form class="form-horizontal" [formGroup]="form"> 	      
+	    	  
+	    <div class="col-md-4 inputGroupContainer">
+		    <div class="input-group"></div>	
+		    	                		                           
+		</div>
+		
+		<div class="form-group">	  
+		    <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+		
+		<div class="form-group">	  
+	  	  <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		  </div>		                		                            
+		</div>
+		
+		<div class="form-group">	  
+		    <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+		
+		<legend>&nbsp;&nbsp;Mantenimiento de Tabla 'Importe CyG'</legend>
+		
+	  	<div class="col-md-6" [ngClass]="displayFieldCss('ncygi')">
+		    <i class="glyphicon glyphicon-user"></i>
+		    <label for="ncygi" class="control-label required">Nº CyG o Incentivo:</label>
+		    <input type="text" id="ncygi" class="form-control" placeholder="Nº CyG o Incentivo" formControlName="ncygi" maxlength="3">
+		    <app-field-error-display [displayError]="isFieldValid('ncygi')" errorMsg="Por favor, indique Nº CyG o Incentivo">
+		    </app-field-error-display>
+		</div>	  
+			  
+	    <div class="col-md-6" [ngClass]="displayFieldCss('desc')">
+	      	<i class="glyphicon glyphicon-user"></i>
+	     	<label for="desc" class="control-label">Descripción:</label>
+	      	<input type="text" id="desc" class="form-control" placeholder="Descripción" formControlName="desc" maxlength="50">	      	
+	    </div>	
+	  
+	    <div class="col-md-6" [ngClass]="displayFieldCss('detexp')">
+	      	<i class="glyphicon glyphicon-user"></i>
+	     	<label for="detexp" class="control-label">Detalle explicativo:</label>
+	      	<!-- <input type="text" id="detexp" class="form-control" placeholder="Detalle explicativo" formControlName="detexp"> -->
+	      	<textarea id="detexp" class="form-control" placeholder="Detalle explicativo" formControlName="detexp" rows="8" cols="80" maxlength="500"></textarea>	      	
+	    </div>	
+	     
+	    <div class="col-sm-12" [ngClass]="displayFieldCss('cygincl')">
+		    <i class="glyphicon glyphicon-check"></i>
+		    <label for="cygincl" class="control-label">CyG/Inc:</label>
+		    <input type="text" id="cygincl" class="form-control" placeholder="CyG/Inc" formControlName="cygincl" maxlength="1">		    
+	    </div>
+	     
+	    <div class="col-sm-12" [ngClass]="displayFieldCss('categoria')">
+		    <i class="glyphicon glyphicon-list-alt"></i>
+		    <label for="categoria" class="control-label">Categoría:</label>
+		    <input type="text" id="categoria" class="form-control" placeholder="Categoría" formControlName="categoria" maxlength="1">		    
+	    </div>
+	      
+	    <div class="col-sm-12" [ngClass]="displayFieldCss('bancoterceros')">
+	      	<i class="glyphicon glyphicon-file"></i>
+	      	<label for="bancoterceros" class="control-label">Banco/Terceros:</label>
+	      	<input type="text" id="bancoterceros" class="form-control" placeholder="Banco/Terceros" formControlName="bancoterceros" maxlength="1">	      	
+	    </div>	      	   
+	     
+	    <div class="form-group">	  
+	    	<div class="col-md-4 inputGroupContainer">
+		    	<div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+		
+		<div class="form-group">	  
+		    <div class="col-md-4 inputGroupContainer">
+			    <div class="input-group"></div>	
+		    </div>		                		                            
+		</div>
+	
+	  <div class="form-group">
+	  	<label class="col-md-4 control-label"></label>
+		  <div class="col-md-6">
+		  	<button class="btn btn-primary" (click)="onSubmit()">Submit</button>&nbsp;&nbsp;
+		  	<button class="btn" (click)="reset()">Reset</button>		  	
+		  </div>	  
+	  </div> 
+	
+	</form>
+</body>
+</html>	

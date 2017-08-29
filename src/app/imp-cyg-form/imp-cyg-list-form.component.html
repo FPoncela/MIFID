@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Aplicación Gestión de Peticiones</title>  
+</head>
+<body> 
+
+	<!-- Header -->
+	<div id="header">
+		<nav class="navbar navbar-inverse ">		
+				<div class="navbar-header">
+					<a class="navbar-brand">Aplicación Gestión de Peticiones</a>					
+				</div>																
+		</nav>
+	</div>
+		
+	<div class="col-md-4 inputGroupContainer">
+	    <div class="input-group"></div>			    	                		                           
+	</div>
+	
+	<div class="form-group">	  
+	    <div class="col-md-4 inputGroupContainer">
+		    <div class="input-group"></div>	
+	    </div>		                		                            
+	</div>
+	
+	<div class="form-group">	  
+  	  <div class="col-md-4 inputGroupContainer">
+		    <div class="input-group"></div>	
+	  </div>		                		                            
+	</div>
+	
+	<div class="form-group">	  
+	    <div class="col-md-4 inputGroupContainer">
+		    <div class="input-group"></div>	
+	    </div>		                		                            
+	</div>
+	
+	<legend>&nbsp;&nbsp;Listado de Registros 'Importe CyG'</legend>
+		
+	<table>
+	  <thead>
+	    <tr>
+	      <th>Nº CyG o Incentivo</th>
+	      <th>Descripción</th>	      
+	      <th>Detalle Explicativo</th>
+	      <th>CyG/Inc</th>
+	      <th>Categoría</th>
+	      <th>Banco/Terceros</th>
+	    </tr>
+	  </thead>
+	  <tfoot>
+	    <tr>
+	      <td colspan="3">El Nº de registros es:</td>
+	      <td ng-bind="regs.length"></td>
+	    </tr>
+	  </tfoot>
+	  <tbody>
+	    <tr ng-repeat="reg in regs" ng-style="{color:($odd?'red':'green')}">
+	      <td>
+		      <td>{{reg.ncygi}}</td>
+		      <td>{{reg.desc}}</td>	      
+		      <td>{{reg.detexp}}</td>
+		      <td>{{reg.cygincl}}</td>
+		      <td>{{reg.categoria}}</td>	      
+		      <td>{{reg.bancoterceros}}</td>
+	      <td>	          	      
+	    </tr>
+	  </tbody>
+	</table>
+ 	    
+	     
+    <div class="form-group">	  
+    	<div class="col-md-4 inputGroupContainer">
+	    	<div class="input-group"></div>	
+	    </div>		                		                            
+	</div>
+		
+	<div class="form-group">	  
+	    <div class="col-md-4 inputGroupContainer">
+		    <div class="input-group"></div>	
+	    </div>		                		                            
+	</div> 
+		
+</body>
+</html>	
